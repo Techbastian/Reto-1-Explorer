@@ -1,0 +1,31 @@
+.cuadrado{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation: muevete 3s ease-in;
+    
+}
+
+@keyframes muevete{
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes muevete1{
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

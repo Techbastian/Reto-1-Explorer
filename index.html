@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./imagenes/FavIcon.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilosCSS/styles.css">
+    <title>Reto Explorer</title>
+</head>
+
+<body>
+    <main id="principal">
+        <div id="personajes">
+            <button id="volver">Volver</button>
+            <div id="imagen">
+                <img id="img" src="./imagenes/golem.png" alt="Golem">
+                <button id="informacion" class="botones">Golem</button>
+            </div>
+            <div id="infopersonaje">
+                <h2 id="titulo" class="descripcion">Golem</h2>
+                <p id="descrip" class="descripcion">
+                    Es lento, pero persistente, y solo ataca las estructuras. Cuando se destruye, explota y se convierte
+                    en dos golemitas que infligen daño en área. Gólem es una carta de rareza épica de Clash Royale que
+                    puede obtenerse a partir de la arena 3.
+                </p>
+            </div>
+            <div id="botones">
+                <button class="desplazamiento" id="atras" disabled style="background-color: gray;"><</button>
+                <button class="desplazamiento" id="adelante">></button>
+            </div>
+        </div>
+        
+        <div id="nuevopersonaje">
+            <button class="botones" id="nuevoper">Nuevo personaje</button>
+        </div>
+    </main>
+    <footer id="miformulario">
+        <form id="nuevo" action="" enctype="multipart/form-data">
+            <h2 class="titulo">Ingrese datos del personaje</h2>
+            <label for="nombre">Nombre del personaje</label>
+            <input class="formulario" type="text" id="nombre" name="nombre" required>
+            <label for="archivo">Ingrese una imagen</label>
+            <input name="archivo" class="botones" type="file" id="archivo" accept="image/*" required>
+            <label for="descripcion">Descripción</label>
+            <textarea class="formulario" name="descripcion" id="descripcion"></textarea>
+            <button id="cargar" class="botones" type="submit">Cargar personaje</button>
+        </form>
+    </footer>   
+    
+    <script src="./scriptsJS/scriptprincipal.js"></script>
+    <script src="./scriptsJS/scriptformulario.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<main id="principal">
+
+        <div id="personajes">
+            <button id="volver">Volver</button>
+            <div id="imagen">
+                <img src="./imagenes/golem.png" alt="Golem">
+                <button id="informacion" class="botones">Golem</button>
+            </div>
+            <div id="descripcion">
+                <h2 class="titulo descrip">Golem</h2>
+                <p class="descrip">
+                    Es lento, pero persistente, y solo ataca las estructuras. Cuando se destruye, explota y se convierte
+                    en dos golemitas que infligen daño en área. Gólem es una carta de rareza épica de Clash Royale que
+                    puede obtenerse a partir de la arena 3.
+                </p>
+            </div>
+        </div>
+        <div id="botones">
+            <button class="desplazamiento" id="atras"><</button>
+            <button class="desplazamiento" id="adelante">></button>
+        </div>
+    </main>
+    <div class="nuevopersonaje">
+        <button id="nuevo" class="botones">Nuevo personaje</button>
+    </div>
+    <footer id="inferior">
+        <form action="">
+            <h2 class="titulo formulario">Ingrese datos del persnaje</h2>
+            <label for="nombre" class="formulario">Nombre del personaje</label>
+            <input class="formulario" type="text" id="nombre" name="nombre">
+            <input class="formulario" type="file" accept="image/*">
+            <label class="formulario" for="descripcion">Descripción</label>
+            <textarea class="formulario" name="descripcion" id="descripcion"></textarea>
+            <button id="cargar" class="botones formulario" type="submit">Cargar personaje</button>
+        </form>
+    </footer>
+
+
+------------------------ FUNCIONES DE BOTONES ------------------------------------
+
+     btnadelante.addEventListener('click', () => {
+        btnatras.disabled = false;
+        btnatras.style = "background-color:var(--botones)";
+        contador += 1;
+        if (contador >= (personajes1.length - 1)) {
+            btnadelante.disabled = true;
+            btnadelante.style = "background-color:gray";
+        }
+        console.log(contador);
+        imagen.setAttribute('src', personajes1[contador].src);
+        btnpersonaje.innerHTML = personajes1[contador].nombre;
+        descripcion[0].innerHTML = personajes1[contador].nombre;
+        descripcion[1].innerHTML = personajes1[contador].descripcion;
+
+        // console.log(personaje[contador]);
+    })
+
+
+    btnatras.addEventListener('click', () => {
+
+        btnadelante.disabled = false;
+        btnadelante.style = "background-color:var(--botones)";
+        if (contador <= 1) {
+            btnatras.disabled = true;
+            btnatras.style = "background-color:gray";
+        }
+        console.log(contador);
+        contador -= 1;
+        imagen.setAttribute('src', personajes1[contador].src);
+        btnpersonaje.innerHTML = personajes1[contador].nombre;
+        descripcion[0].innerHTML = personajes1[contador].nombre;
+        descripcion[1].innerHTML = personajes1[contador].descripcion;
+
+        // console.log(personaje[contador]);
+    })
